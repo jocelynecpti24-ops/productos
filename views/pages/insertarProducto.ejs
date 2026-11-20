@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../sections/head'); %>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <main>
+        <div class="container">
+            <%- include('../sections/menu'); %>
+            <h1>Productos EJS</h1>
+
+            <div class="row mt-5">
+                <div class="cold-2"></div>
+                <div class="cold-8">
+                    <form action="/guardarProducto" method="post">
+                       <div class="card">
+                            <div class="card-header">
+                                <h1>Incertar Producto</h1>
+                            </div> 
+                            <div class="card-body">
+                                <!-- NOMBRE DEL PRODUCTO-->
+                                <input type="text" class="from-control"
+                                name="nombreProducto"  id="nombreProducto"
+                                placeholder="Nombre del Producto"/>
+
+                                <!-- MARCA DEL PRODUCTO-->
+                                <input type="text" class="from-control"
+                                name="marcaProducto"  id="marcaProducto"
+                                placeholder="Marca del Producto"/>
+
+                                <!-- PRECIO DEL PRODUCTO-->
+                                <input type="text" class="from-control"
+                                name="presioProducto"  id="presioProducto"
+                                placeholder="Precio del Producto"/>
+                            </div>
+                            <div class="card-footer">
+                                <a class="btn btn-secondary"
+                                    href="/listaProductos">Cancelar</a>
+                                <button class="btn btn-primary" type="submit">
+                                    Guardar Producto
+                                </button>
+                            </div>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+        <%- include('../sections/footer'); %>
+    </footer>
+</body>
+</html>
